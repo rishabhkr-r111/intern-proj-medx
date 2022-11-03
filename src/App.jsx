@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Navbar from './assets/comp/navbar';
-
+import Hero from './assets/comp/hero'
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -11,7 +11,11 @@ function App() {
 
   
 return (
-    <Navbar />
+   <div>
+      <Navbar />
+      <Hero />
+    </div>
+    
   )
 }
 
