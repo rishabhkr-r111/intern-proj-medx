@@ -15,7 +15,7 @@ function ProductTypes() {
                 className="product-type"
                 src="https://cdn.discordapp.com/attachments/1038025122369503282/1038111843908079677/20221104_204749_0000.png"
             />
-            <div className="product-text">tablates</div>
+            <div className="product-text">Tablates</div>
 
             </div>
 
