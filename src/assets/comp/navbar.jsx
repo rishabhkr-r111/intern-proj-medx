@@ -37,12 +37,12 @@ function Navbar() {
                 <div className="flex flex-shrink-0 items-center">
                   <img
                     className="block h-11 w-auto lg:hidden"
-                    src="src\assets\img\med.png"
+                    src="https://cdn.discordapp.com/attachments/1037406020449861724/1037797448900419614/20221104_000510_0000.png"
                     alt="Your Company"
                   />
                   <img
                     className="hidden h-11 w-auto lg:block drop-shadow-lg"
-                    src="src\assets\img\med.png"
+                    src="https://cdn.discordapp.com/attachments/1037406020449861724/1037797448900419614/20221104_000510_0000.png"
                     alt="Your Company"
                   />
                 </div>
