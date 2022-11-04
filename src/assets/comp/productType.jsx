@@ -13,7 +13,7 @@ function ProductTypes() {
             <div className="product-container ">
             <img 
                 className="product-type"
-                src="https://cdn.discordapp.com/attachments/1037406020449861724/1037962730671448094/unknown.png"
+                src="https://cdn.discordapp.com/attachments/1038025122369503282/1038111843908079677/20221104_204749_0000.png"
             />
             <div className="product-text">tablates</div>
 
@@ -31,9 +31,18 @@ function ProductTypes() {
             <div className="product-container ">
             <img 
                 className="product-type"
-                src="https://cdn.discordapp.com/attachments/1037406020449861724/1037962730671448094/unknown.png"
+                src="https://cdn.discordapp.com/attachments/1038025122369503282/1038111844272971836/png_20221104_205350_0000.png"
             />
-            <div className="product-text">tablates</div>
+            <div className="product-text">Healtcare Products</div>
+
+            </div>
+
+            <div className="product-container ">
+            <img 
+                className="product-type"
+                src="https://cdn.discordapp.com/attachments/1038025122369503282/1038111843597692928/png_20221104_204511_0000.png"
+            />
+            <div className="product-text">Tests</div>
 
             </div>
 
@@ -42,34 +51,25 @@ function ProductTypes() {
                 className="product-type"
                 src="https://cdn.discordapp.com/attachments/1037406020449861724/1037962730671448094/unknown.png"
             />
-            <div className="product-text">tablates</div>
+            <div className="product-text">Vitamins</div>
 
             </div>
 
             <div className="product-container ">
             <img 
                 className="product-type"
-                src="https://cdn.discordapp.com/attachments/1037406020449861724/1037962730671448094/unknown.png"
+                src="https://cdn.discordapp.com/attachments/1038025122369503282/1038111843232784435/png_20221104_204333_0000.png"
             />
-            <div className="product-text">tablates</div>
+            <div className="product-text">Healtcare Tools</div>
 
             </div>
 
             <div className="product-container ">
             <img 
                 className="product-type"
-                src="https://cdn.discordapp.com/attachments/1037406020449861724/1037962730671448094/unknown.png"
+                src="https://i.pinimg.com/564x/a3/86/e2/a386e20656242936715d0c79220e3431.jpg"
             />
-            <div className="product-text">tablates</div>
-
-            </div>
-
-            <div className="product-container ">
-            <img 
-                className="product-type"
-                src="https://cdn.discordapp.com/attachments/1037406020449861724/1037962730671448094/unknown.png"
-            />
-            <div className="product-text">tablates</div>
+            <div className="product-text">Doctor Consultation</div>
 
             </div>
 
