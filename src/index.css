@@ -27,3 +27,8 @@
 .product-text {
     @apply text-center mt-2 font-semibold;
 }
+
+.choose-us {
+    @apply m-10 text-gray-100 w-64 h-64 flex justify-around items-center rounded-[100%] font-bold 
+            text-xl ;
+}

@@ -15,14 +15,14 @@ function ProductTypes() {
                 className="product-type"
                 src="https://cdn.discordapp.com/attachments/1038025122369503282/1038111843908079677/20221104_204749_0000.png"
             />
-            <div className="product-text">Tablates</div>
+            <div className="product-text">Medicines</div>
 
             </div>
 
             <div className="product-container ">
             <img 
                 className="product-type"
-                src="https://cdn.discordapp.com/attachments/1037406020449861724/1037966122118561832/Sanitation-Bottle-Clipart-PNG-Images-Hand-Sanitizer-Bottle-Png-Illustration-Hand-Clipart-Care-Sanitizer-PNG-Image-For-Free-Download-transformed.jpeg"
+                src="https://cdn.discordapp.com/attachments/1038025122369503282/1038285310443913267/png_20221105_082323_0000.png"
             />
             <div className="product-text">COVID</div>
 
@@ -69,40 +69,32 @@ function ProductTypes() {
                 className="product-type"
                 src="https://i.pinimg.com/564x/a3/86/e2/a386e20656242936715d0c79220e3431.jpg"
             />
-            <div className="product-text">Doctor Consultation</div>
+            <div className="product-text">Doctor Consultation</div>          
 
+            </div>
+
+           
+
+            <div className="product-container ">
+            <img 
+                className="product-type"
+                src="https://cdn.discordapp.com/attachments/1038025122369503282/1038285310074822716/png_20221105_082246_0000.png"
+            />
+            <div className="product-text">Baby Care</div>          
+            </div>
+
+            <div className="product-container ">
+            <img 
+                className="product-type"
+                src="https://cdn.discordapp.com/attachments/1038025122369503282/1038285310859153538/png_20221105_082356_0000.png"
+            />
+            <div className="product-text">Maternity Care</div>          
             </div>
 
             
 
            
 
-
-
-            {/* <img 
-                className="product-type"
-                src="https://cdn.discordapp.com/attachments/1037406020449861724/1037966122118561832/Sanitation-Bottle-Clipart-PNG-Images-Hand-Sanitizer-Bottle-Png-Illustration-Hand-Clipart-Care-Sanitizer-PNG-Image-For-Free-Download-transformed.jpeg"
-            />
-            <img 
-                className="product-type"
-                src="https://i.pinimg.com/564x/a3/86/e2/a386e20656242936715d0c79220e3431.jpg"
-            />
-            <img 
-                className="product-type"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTqE7lBKhXQPWBcqmYNjiOs7mXl0T0fW667MTvZIYpPX7pv4s0&s"
-            />
-            <img 
-                className="product-type"
-                src="https://cdn.discordapp.com/attachments/1037406020449861724/1037962137655582811/unknown.png"
-            />
-            <img 
-                className="product-type"
-                src="https://cdn.discordapp.com/attachments/1037406020449861724/1037962137655582811/unknown.png"
-            />
-            <img 
-                className="product-type"
-                src="https://cdn.discordapp.com/attachments/1037406020449861724/1037962137655582811/unknown.png"
-            /> */}
 
         </div>
         
