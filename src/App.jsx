@@ -1,9 +1,12 @@
 import { useState } from 'react'
+import { Route, Routes } from 'react-router-dom';
 import Navbar from './assets/comp/navbar';
-import Hero from './assets/comp/hero'
-import Search from './assets/comp/search';
-import ProductTypes from './assets/comp/productType';
-import WhyUs from './assets/comp/whyUs';
+import Home from './pages/home'
+import About from './pages/about'
+import Conact from './pages/contact'
+import Offers from './pages/offers'
+import Faq from './pages/faq'
+import Signin from './pages/signin';
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -14,13 +17,21 @@ function App() {
 
   
 return (
-   <div>
+   <>
       <Navbar />
-      <Search/>
-      <Hero />
-      <ProductTypes />
-      <WhyUs />
-    </div>
+
+      <Routes>
+        <Route path='/' element={ <Home/> } />
+        <Route path='/about' element={ <About/> } />
+        <Route path='/contact' element={ <Conact/> } />
+        <Route path='/offers' element={ <Offers/> } />
+        <Route path='/faq' element={ <Faq/> } />
+        <Route path='/signin' element={ <Signin/> } />
+
+      </Routes>
+
+      
+    </>
     
   )
 }
