@@ -1,10 +1,15 @@
 function About() {
   return (
     <>
-      <h1 className=" text-center m-8 text-4xl font-semibold text-gray-600">
+       <div className="flex w-full "> 
+            <div className="mt-7 mb-2 mx-9 text-xl text-white font-bold text-center p-2  rounded-[25px]
+              bg-black drop-shadow-xl px-7 py-2 
+            ">  About Us </div>
+        </div>
+      <h1 className=" m-8 text-4xl font-semibold text-gray-600">
         What is MedX?
       </h1>
-      <p className=" text-center m-8 text-[20px] ">
+      <p className="m-8 text-[20px] ">
         MedX is the most user-friendly app for ordering medications that you can
         find. In order to deliver better healthcare at lower costs, we bring
         together a variety of pharmaceutical businesses, diagnostic labs,
@@ -16,11 +21,11 @@ function About() {
         {' '}
         Healthcare made easy by the pharmacy you trust
       </p>
-      <p className=" text-center m-8 text-4xl font-semibold text-gray-600">
+      <p className="m-8 text-4xl font-semibold text-gray-600">
         {' '}
         Our Services
       </p>
-      <p className=" text-center m-8 text-[20px] ">
+      <p className="m-8 text-[20px] ">
         We provide consumers with the option of drone delivery, which allows
         them to obtain their things in minutes. As a result, we offer
         contactless payments, allowing them to stay safe in the comfort of their
