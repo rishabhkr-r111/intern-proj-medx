@@ -6,6 +6,8 @@ function About() {
               bg-black drop-shadow-xl px-7 py-2 
             ">  About Us </div>
         </div>
+      <div className="border-2 border-gray-200 rounded-xl m-5 drop-shadow-lg bg-gray-50">
+
       <h1 className=" m-8 text-4xl font-semibold text-gray-600">
         What is MedX?
       </h1>
@@ -18,11 +20,13 @@ function About() {
         India.
       </p>
       <p className=" text-center m-8 text-[18px] italic  text-green-600 ">
-        {' '}
+   
         Healthcare made easy by the pharmacy you trust
       </p>
+
+      </div>
       <p className="m-8 text-4xl font-semibold text-gray-600">
-        {' '}
+
         Our Services
       </p>
       <p className="m-8 text-[20px] ">
