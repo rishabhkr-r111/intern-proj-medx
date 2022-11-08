@@ -6,6 +6,8 @@ function About() {
               bg-black drop-shadow-xl px-7 py-2 
             ">  About Us </div>
         </div>
+
+
       <div className="border-2 border-gray-200 rounded-xl m-5 drop-shadow-lg bg-gray-50">
 
       <h1 className=" m-8 text-4xl font-semibold text-gray-600">
@@ -25,7 +27,12 @@ function About() {
       </p>
 
       </div>
+
+
+
+      <div className="border-2 border-gray-200 rounded-xl m-5 drop-shadow-lg bg-gray-50">
       <p className="m-8 text-4xl font-semibold text-gray-600">
+
 
         Our Services
       </p>
@@ -38,6 +45,7 @@ function About() {
         we provide lab tests to clients at their homes, helping them to monitor
         their health.
       </p>
+      </div> 
     </>
   );
 }
