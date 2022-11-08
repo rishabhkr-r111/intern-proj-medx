@@ -85,7 +85,7 @@ function Navbar() {
                   <BellIcon className="h-6 w-6" aria-hidden="true" />
                 </button> */ }
 
-                <Link to='/signin' className='bg-gray-800 text-white bg-gray-700 px-3 py-2 rounded-md text-sm font-medium'> login</Link>
+                <Link to='/signin' className='bg-gray-800 text-white bg-gray-700 px-3 py-2 rounded-md text-sm font-medium'> Sign in / Register</Link>
 
                 
               </div>

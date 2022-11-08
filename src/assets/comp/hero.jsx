@@ -27,7 +27,7 @@ function Hero() {
                 <SwiperSlide>
                     <img
                         className="object-fill h-80 m-auto rounded-[40px]"
-                        src="https://cdn01.pharmeasy.in/dam/banner/banner/6fa5c8350d2-STAR25.jpg"
+                        src="https://cdn.discordapp.com/attachments/1038025122369503282/1039427777436332062/png_20221108_120331_0000.png"
                         alt="image slide 1"
                     />
                 </SwiperSlide>
