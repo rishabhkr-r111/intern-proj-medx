@@ -9,7 +9,7 @@ function About() {
       <div className="border-2 border-gray-200 rounded-xl m-5 drop-shadow-lg bg-gray-50">
 
       <h1 className=" m-8 text-4xl font-semibold text-gray-600">
-        What is MedX?
+        What is MedX ?
       </h1>
       <p className="m-8 text-[20px] ">
         MedX is the most user-friendly app for ordering medications that you can
