@@ -1,5 +1,13 @@
+import { Link, useNavigate} from 'react-router-dom'
+
 
 function Concerns() {
+    const navigate = useNavigate()
+
+    function nav(q) {
+      navigate('/search/' + q)
+    }
+
     return(
         <>
         <div className="flex"> 
@@ -10,7 +18,7 @@ function Concerns() {
 
         <div className="w-full flex overflow-x-scroll flex-nowrap no-scrollbar">
 
-            <div className="product-container ">
+            <div className="product-container " onClick={() => { nav('Diabetes') }}>
             <img 
                 className="product-type"
                 src="https://cdn.discordapp.com/attachments/1038137730615484427/1038284288640163930/png_20221104_232053_0000.png"
@@ -19,7 +27,7 @@ function Concerns() {
 
             </div>
 
-            <div className="product-container ">
+            <div className="product-container " onClick={() => { nav('Cardiac') }}>
             <img 
                 className="product-type"
                 src="https://cdn.discordapp.com/attachments/1038137730615484427/1038284289118318602/png_20221104_233207_0000.png"
@@ -28,7 +36,7 @@ function Concerns() {
 
             </div>
 
-            <div className="product-container ">
+            <div className="product-container " onClick={() => { nav('Gastro') }}>
             <img 
                 className="product-type"
                 src="https://cdn.discordapp.com/attachments/1038137730615484427/1038284289512591530/png_20221105_002546_0000.png"
@@ -37,7 +45,7 @@ function Concerns() {
 
             </div>
 
-            <div className="product-container ">
+            <div className="product-container " onClick={() => { nav('Liver') }}>
             <img 
                 className="product-type"
                 src="https://cdn.discordapp.com/attachments/1038137730615484427/1038284289936207883/png_20221105_073031_0000.png"
@@ -46,7 +54,7 @@ function Concerns() {
 
             </div>
 
-            <div className="product-container ">
+            <div className="product-container " onClick={() => { nav('Respiratory') }}>
             <img 
                 className="product-type"
                 src="https://cdn.discordapp.com/attachments/1038137730615484427/1038284290275954698/png_20221105_073903_0000.png"
@@ -55,7 +63,7 @@ function Concerns() {
 
             </div>
 
-            <div className="product-container ">
+            <div className="product-container " onClick={() => { nav('Bones and Joints') }}>
             <img 
                 className="product-type"
                 src="https://cdn.discordapp.com/attachments/1038137730615484427/1038284291047694376/png_20221105_074534_0000.png"
@@ -64,7 +72,7 @@ function Concerns() {
 
             </div>
 
-            <div className="product-container ">
+            <div className="product-container " onClick={() => { nav('ENT') }}>
             <img 
                 className="product-type"
                 src="https://cdn.discordapp.com/attachments/1038137730615484427/1038284291509071972/png_20221105_081259_0000.png"
@@ -75,7 +83,7 @@ function Concerns() {
 
            
 
-            <div className="product-container ">
+            <div className="product-container " onClick={() => { nav('Eye') }}>
             <img 
                 className="product-type"
                 src="https://cdn.discordapp.com/attachments/1038137730615484427/1038284292326969414/png_20221105_082022_0000.png"
@@ -83,7 +91,7 @@ function Concerns() {
             <div className="product-text">Eye</div>          
             </div>
 
-            <div className="product-container ">
+            <div className="product-container " onClick={() => { nav('Kidney') }}>
             <img 
                 className="product-type"
                 src="https://cdn.discordapp.com/attachments/1038137730615484427/1038284291894943824/png_20221105_081508_0000.png"

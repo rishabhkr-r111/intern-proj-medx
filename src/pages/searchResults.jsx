@@ -1,34 +1,35 @@
+import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
+import Search from '../assets/comp/search'
 
 
-function Popular() {
+function SearchResults() {
+    const {q} = useParams()
+
     const [data, setdata] = useState([])
 
     useEffect( () => {
         ( async () => {
 
-            const r = await fetch('http://127.0.0.1:5000/search/crocin')
+            const r = await fetch('http://127.0.0.1:5000/search/' + q)
             const d = await r.json()
             setdata(d)
-            console.log(d)
-            console.log(data[0].name)
-            console.log(data[1].name)
-
         })();
 
-    }, [])
+    },)
 
 
     return (
         <>
+            <Search />
             <div className="flex"> 
                 <div className="mt-7 mb-2 mx-9 text-xl text-white font-bold text-center p-2  rounded-[25px]
-              bg-black drop-shadow-xl px-7 py-2
-            ">  Popular </div>
+              bg-black drop-shadow-xl px-7 py-2 mx-80
+            ">  Results for {q} </div>
             </div>
 
             <div> 
-                <div className="grid grid-cols-5 gap-2 ">
+                <div className="grid grid-cols-2 gap-2 mx-80">
 
 
                     {data.map(
@@ -51,12 +52,12 @@ function Popular() {
                 </div>
             </div>
 
-            <div className="text-center text-green-700 text-2xl font-bold"> 
+            {/* <div className="text-center text-green-700 text-2xl font-bold"> 
                 more...
-            </div>
+            </div> */}
 
         </>
     )
 }
 
-export default Popular
+export default SearchResults

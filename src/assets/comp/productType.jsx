@@ -1,5 +1,13 @@
+import { Link, useNavigate} from 'react-router-dom'
+
 
 function ProductTypes() {
+    const navigate = useNavigate()
+
+    function nav(q) {
+      navigate('/search/' + q)
+    }
+
     return(
         <>
         <div className="flex"> 
@@ -10,7 +18,7 @@ function ProductTypes() {
 
         <div className="w-full flex overflow-x-scroll flex-nowrap no-scrollbar">
 
-            <div className="product-container ">
+            <div className="product-container" onClick={() => { nav('Medicines') }}>
             <img 
                 className="product-type"
                 src="https://cdn.discordapp.com/attachments/1038025122369503282/1038111843908079677/20221104_204749_0000.png"
@@ -19,7 +27,7 @@ function ProductTypes() {
 
             </div>
 
-            <div className="product-container ">
+            <div className="product-container " onClick={() => { nav('COVID') }}>
             <img 
                 className="product-type"
                 src="https://cdn.discordapp.com/attachments/1038025122369503282/1038285310443913267/png_20221105_082323_0000.png"
@@ -28,7 +36,7 @@ function ProductTypes() {
 
             </div>
 
-            <div className="product-container ">
+            <div className="product-container " onClick={() => { nav('Healtcare') }}>
             <img 
                 className="product-type"
                 src="https://cdn.discordapp.com/attachments/1038025122369503282/1038111844272971836/png_20221104_205350_0000.png"
@@ -46,7 +54,7 @@ function ProductTypes() {
 
             </div>
 
-            <div className="product-container ">
+            <div className="product-container " onClick={() => { nav('Vitamins') }}>
             <img 
                 className="product-type"
                 src="https://cdn.discordapp.com/attachments/1037406020449861724/1037962730671448094/unknown.png"
@@ -75,7 +83,7 @@ function ProductTypes() {
 
            
 
-            <div className="product-container ">
+            <div className="product-container " onClick={() => { nav('Baby Care') }} >
             <img 
                 className="product-type"
                 src="https://cdn.discordapp.com/attachments/1038025122369503282/1038285310074822716/png_20221105_082246_0000.png"
@@ -83,7 +91,7 @@ function ProductTypes() {
             <div className="product-text">Baby Care</div>          
             </div>
 
-            <div className="product-container ">
+            <div className="product-container " onClick={() => { nav('Maternity') }}>
             <img 
                 className="product-type"
                 src="https://cdn.discordapp.com/attachments/1038025122369503282/1038285310859153538/png_20221105_082356_0000.png"
