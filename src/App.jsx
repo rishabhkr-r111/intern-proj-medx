@@ -7,6 +7,7 @@ import Conact from './pages/contact'
 import Offers from './pages/offers'
 import Faq from './pages/faq'
 import Signin from './pages/signin';
+import Register from './pages/register';
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -27,7 +28,8 @@ return (
         <Route path='/offers' element={ <Offers/> } />
         <Route path='/faq' element={ <Faq/> } />
         <Route path='/signin' element={ <Signin/> } />
-
+        <Route path='/register' element={ <Register/> } />
+        
       </Routes>
 
       
