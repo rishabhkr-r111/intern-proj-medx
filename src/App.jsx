@@ -9,6 +9,7 @@ import Faq from './pages/faq'
 import Signin from './pages/signin';
 import Register from './pages/register';
 import SearchResults from './pages/searchResults'
+import Product from './pages/product';
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -31,6 +32,7 @@ return (
         <Route path='/signin' element={ <Signin/> } />
         <Route path='/register' element={ <Register/> } />
         <Route path='/search/:q' element={ <SearchResults/> } />
+        <Route path='/product' element={ <Product/> } />
         
       </Routes>
 
