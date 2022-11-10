@@ -11,7 +11,7 @@ function SearchResults() {
     useEffect( () => {
         ( async () => {
 
-            const r = await fetch('http://127.0.0.1:5000/search/' + q)
+            const r = await fetch('https://meds-api.onrender.com/search/' + q)
             const d = await r.json()
             setdata(d)
         })();
