@@ -32,7 +32,7 @@ return (
         <Route path='/signin' element={ <Signin/> } />
         <Route path='/register' element={ <Register/> } />
         <Route path='/search/:q' element={ <SearchResults/> } />
-        <Route path='/product' element={ <Product/> } />
+        <Route path='/product/:id' element={ <Product/> } />
         
       </Routes>
 

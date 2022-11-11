@@ -1,7 +1,10 @@
 import { useEffect, useState } from 'react'
+import { Link, useNavigate} from 'react-router-dom'
 
 
 function Popular() {
+    const navigate = useNavigate()
+
     const [data, setdata] = useState([])
 
     useEffect( () => {
@@ -18,6 +21,9 @@ function Popular() {
 
     }, [])
 
+     function nav(id) {
+      navigate('/product/' + id)
+    }
 
     return (
         <>
@@ -34,7 +40,9 @@ function Popular() {
                     {data.map(
                         (item) => (
 
-                     <div className="m-5 border-[1px] border-gray-200 rounded-xl drop-shadow-sm p-1" key={item.name}>
+                     <div className="m-5 border-[1px] border-gray-200 rounded-xl drop-shadow-sm p-1" 
+                        onClick={() => { nav(item.url_key) }}
+                        key={item.name}>
                         <img 
                         className="product-type border-2 border-gray-200 rounded-xl drop-shadow-sm bg-gray-50 "
                 src={"https://newassets.apollo247.com/pub/media/catalog/product"+ item.thumbnail.slice(35)} 
