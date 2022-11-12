@@ -7,6 +7,8 @@ function Product() {
     const [data, setdata] = useState([])
     const [p, setp] = useState(0)
 
+    let [count, setcount] = useState(1)
+
     useEffect( () => {
         ( async () => {
 
@@ -92,11 +94,11 @@ function Product() {
                     <div className="custom-number-input w-24 ml-5">                  
                     <div className="flex flex-row h-auto w-full rounded-lg relative bg-transparent m-1">
                         <button className=" bg-white text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
-                            <span class="m-auto text-2xl font-thin">−</span>
+                            <span className="m-auto text-2xl font-thin" onClick={() => { setcount((pev) => pev - 1 )}}>−</span>
                         </button>
-                        <input type="number" className="outline-none focus:outline-none text-center w-full bg-white font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="0"></input>
+                        <input type="number" className="outline-none focus:outline-none text-center w-full bg-white font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value={count}></input>
                     <button data-action="increment" className="bg-white text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
-                        <span className="m-auto text-2xl font-thin">+</span>
+                        <span className="m-auto text-2xl font-thin" onClick={() => { setcount((pev) => pev + 1 )}}>+</span>
                     </button>
                     </div>
                     </div>
