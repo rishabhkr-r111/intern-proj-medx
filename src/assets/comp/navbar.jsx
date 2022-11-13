@@ -3,6 +3,7 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Link, useNavigate} from 'react-router-dom'
 import { useState } from 'react'
+import { auth } from '../../firebase-config'
 
 const navigation = [
   // { name: 'Home', href: '/', current: false },
@@ -18,7 +19,7 @@ function classNames(...classes) {
 }
 
 
-function Navbar() {
+function Navbar( {user} ) {
 
     const navigate = useNavigate()
 
@@ -26,6 +27,20 @@ function Navbar() {
       navigate('/')
     }
 
+    const users = () => {
+      if(user){
+        return (
+          <Link to='/user' className='bg-gray-800 text-white bg-gray-700 px-3 py-2 rounded-md text-sm font-medium'> { user.email }</Link>
+        )
+      }
+      else {
+        return (
+          <Link to='/signin' className='bg-gray-800 text-white bg-gray-700 px-3 py-2 rounded-md text-sm font-medium'> Sign in / Register</Link>
+        )
+      }
+    }
+
+   
     return (
         <Disclosure as="nav" className="bg-gray-50 drop-shadow-lg">
       {({ open }) => (
@@ -85,8 +100,10 @@ function Navbar() {
                   <BellIcon className="h-6 w-6" aria-hidden="true" />
                 </button> */ }
 
-                <Link to='/signin' className='bg-gray-800 text-white bg-gray-700 px-3 py-2 rounded-md text-sm font-medium'> Sign in / Register</Link>
+                {/* <Link to='/signin' className='bg-gray-800 text-white bg-gray-700 px-3 py-2 rounded-md text-sm font-medium'> { auth.currentUser?.email }</Link> */}
+                {/* <Link to='/signin' className='bg-gray-800 text-white bg-gray-700 px-3 py-2 rounded-md text-sm font-medium'> Sign in / Register</Link> */}
 
+                {users()}
                 
               </div>
             </div>

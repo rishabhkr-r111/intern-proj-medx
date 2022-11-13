@@ -1,10 +1,11 @@
 import { LockClosedIcon } from '@heroicons/react/20/solid'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { signInWithEmailAndPassword } from 'firebase/auth'
 import { auth } from '../firebase-config'
 import { useState } from 'react'
 
 function Signin() {
+  const navigate = useNavigate()
   const [email, setemail] = useState('');
   const [password, setpassword] = useState('');
 
@@ -13,6 +14,8 @@ function Signin() {
     try {
       const user = await signInWithEmailAndPassword(auth, email, password)
       console.log(user)
+      navigate('/')
+
     } catch (error) {
       console.log(error)
     }

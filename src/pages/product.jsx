@@ -1,7 +1,9 @@
 import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
-function Product() {
+function Product( {user}) {
+    const navigate = useNavigate()
     const {id} = useParams()
 
     const [data, setdata] = useState([])
@@ -24,6 +26,15 @@ function Product() {
         })();
 
     },[])
+
+    const buynow = () => {
+        if(user){
+            navigate('/user')
+        }
+        else {
+            navigate('/signin')
+        }
+    }
 
     return (
         <>
@@ -105,7 +116,7 @@ function Product() {
 
                     
 
-                    <div className="my-2 ml-7 bg-orange-400 rounded-lg text-white font-semibold px-5  ">Buy Now</div>
+                    <div className="my-2 ml-7 bg-orange-400 rounded-lg text-white font-semibold px-5  " onClick={ buynow }>Buy Now</div>
                     <div className="m-2 bg-orange-500 rounded-sm text-white font-semibold px-9">Add to cart</div>
 
                 </div>
