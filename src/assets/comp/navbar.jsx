@@ -1,48 +1,55 @@
-import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
-import { Link, useNavigate} from 'react-router-dom'
-import { useState } from 'react'
-import { auth } from '../../firebase-config'
+import { Fragment } from "react";
+import { Disclosure, Menu, Transition } from "@headlessui/react";
+import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { auth } from "../../firebase-config";
 
 const navigation = [
   // { name: 'Home', href: '/', current: false },
-  { name: 'Offers', href: 'offers', current: false },
-  { name: 'About us', href: '/about', current: false },
-  { name: 'FAQs', href: '/faq', current: false },
-  { name: 'Contacts', href: '/contact', current: false },
-
-]
+  { name: "Offers", href: "offers", current: false },
+  { name: "About us", href: "/about", current: false },
+  { name: "FAQs", href: "/faq", current: false },
+  { name: "Contacts", href: "/contact", current: false },
+];
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(" ");
 }
 
+function Navbar({ user }) {
+  const navigate = useNavigate();
 
-function Navbar( {user} ) {
+  const nav = () => {
+    navigate("/");
+  };
 
-    const navigate = useNavigate()
-
-    const nav =  () => {
-      navigate('/')
+  const users = () => {
+    if (user) {
+      return (
+        <Link
+          to="/user"
+          className="bg-gray-800 text-white bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
+        >
+          {" "}
+          {user.email}
+        </Link>
+      );
+    } else {
+      return (
+        <Link
+          to="/signin"
+          className="bg-gray-800 text-white bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
+        >
+          {" "}
+          Sign in / Register
+        </Link>
+      );
     }
+  };
 
-    const users = () => {
-      if(user){
-        return (
-          <Link to='/user' className='bg-gray-800 text-white bg-gray-700 px-3 py-2 rounded-md text-sm font-medium'> { user.email }</Link>
-        )
-      }
-      else {
-        return (
-          <Link to='/signin' className='bg-gray-800 text-white bg-gray-700 px-3 py-2 rounded-md text-sm font-medium'> Sign in / Register</Link>
-        )
-      }
-    }
-
-   
-    return (
-        <Disclosure as="nav" className="bg-gray-50 drop-shadow-lg">
+  return (
+    <Disclosure as="nav" className="bg-gray-50 drop-shadow-lg">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -80,10 +87,12 @@ function Navbar( {user} ) {
                         key={item.name}
                         to={item.href}
                         className={classNames(
-                          item.current ? 'bg-gray-900 text-white' : 'text-black hover:bg-gray-700 hover:text-white',
-                          'px-3 py-2 rounded-md text-sm font-medium'
+                          item.current
+                            ? "bg-gray-900 text-white"
+                            : "text-black hover:bg-gray-700 hover:text-white",
+                          "px-3 py-2 rounded-md text-sm font-medium"
                         )}
-                        aria-current={item.current ? 'page' : undefined}
+                        aria-current={item.current ? "page" : undefined}
                       >
                         {item.name}
                       </Link>
@@ -98,13 +107,12 @@ function Navbar( {user} ) {
                 >
                   <span className="sr-only">View notifications</span>
                   <BellIcon className="h-6 w-6" aria-hidden="true" />
-                </button> */ }
+                </button> */}
 
                 {/* <Link to='/signin' className='bg-gray-800 text-white bg-gray-700 px-3 py-2 rounded-md text-sm font-medium'> { auth.currentUser?.email }</Link> */}
                 {/* <Link to='/signin' className='bg-gray-800 text-white bg-gray-700 px-3 py-2 rounded-md text-sm font-medium'> Sign in / Register</Link> */}
 
                 {users()}
-                
               </div>
             </div>
           </div>
@@ -117,10 +125,12 @@ function Navbar( {user} ) {
                   as="a"
                   href={item.href}
                   className={classNames(
-                    item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                    'block px-3 py-2 rounded-md text-base font-medium '
+                    item.current
+                      ? "bg-gray-900 text-white"
+                      : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                    "block px-3 py-2 rounded-md text-base font-medium "
                   )}
-                  aria-current={item.current ? 'page' : undefined}
+                  aria-current={item.current ? "page" : undefined}
                 >
                   {item.name}
                 </Disclosure.Button>
@@ -130,8 +140,7 @@ function Navbar( {user} ) {
         </>
       )}
     </Disclosure>
-    )
-        
+  );
 }
 
-export default Navbar
+export default Navbar;
