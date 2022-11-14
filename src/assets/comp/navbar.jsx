@@ -31,7 +31,7 @@ function Navbar({ user }) {
           to="/user"
           className="bg-gray-800 text-white bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
         >
-          {" "}
+          {"Hi "}
           {user.email}
         </Link>
       );
