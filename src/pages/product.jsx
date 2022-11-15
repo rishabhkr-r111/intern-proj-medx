@@ -8,7 +8,7 @@ function Product({ user }) {
   const { id } = useParams();
 
   const [data, setdata] = useState([]);
-  const [p, setp] = useState(0);
+  const [p, setp] = useState({});
   const [buy, setbuy] = useState(false);
 
   let [count, setcount] = useState(1);
@@ -40,7 +40,15 @@ function Product({ user }) {
         <div className="ml-5 mt-9 mr-2 border-[1px] border-gray-200 rounded-lg flex-1 blue-gray-50">
           <div className="m-5 font-semibold text-2xl">{data.name}</div>
 
-          <img src={data.img} className="w-64 h-auto mx-auto my-9" />
+          <img
+            src={
+              p.thumbnail
+                ? "https://newassets.apollo247.com/pub/media/catalog/product" +
+                  p.thumbnail?.slice(35)
+                : "https://cdn.discordapp.com/attachments/1038025122369503282/1041920679928418344/imagenotfound.png"
+            }
+            className="w-64 h-auto mx-auto my-9"
+          />
 
           {/* <div className="m-5 font-semibold text-lg">Crocin Pain Relief Tablet 15's</div> */}
           <div className="mt-5 mx-5 font-bold text-md">PRODUCT DETAILS</div>
