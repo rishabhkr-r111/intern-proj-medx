@@ -38,7 +38,7 @@ function Product({ user }) {
     <>
       <div className="flex ">
         <div className="ml-5 mt-9 mr-2 border-[1px] border-gray-200 rounded-lg flex-1 blue-gray-50">
-          <div className="m-5 font-semibold text-2xl">{data.name}</div>
+          <div className="m-5 font-semibold text-2xl">{p.name}</div>
 
           <img
             src={
@@ -50,7 +50,6 @@ function Product({ user }) {
             className="w-64 h-auto mx-auto my-9"
           />
 
-          {/* <div className="m-5 font-semibold text-lg">Crocin Pain Relief Tablet 15's</div> */}
           <div className="mt-5 mx-5 font-bold text-md">PRODUCT DETAILS</div>
           <div className="mx-5 my-1 font-semibold text-md">
             <span className="text-gray-500"> Manufacturer : </span>{" "}
@@ -67,20 +66,7 @@ function Product({ user }) {
           <div className="mx-5 my-1 font-semibold text-ld">
             <span className="text-gray-500">About :</span>
             <p> {data.about} </p>
-            {/* <p> {data.about} </p>
-                       <p> {data.about} </p>
-                       <p> {data.about} </p>
-                       <p> {data.about} </p>
-                       <p> {data.about} </p>
-                       <p> {data.about} </p>
-                       <p> {data.about} </p> */}
           </div>
-
-          {/* <div className="my-9 border-2 border-gray-400 inline-block mx-5">
-                        <div className="mx-5 my-1 font-semibold text-md">
-                            <span className="text-gray-500">Price : ₹</span> 25.55
-                        </div>
-                    </div> */}
         </div>
 
         <div className="mr-5 my-9  ">

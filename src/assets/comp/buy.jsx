@@ -55,7 +55,7 @@ function Buy({ buy, setbuy, user, p, count }) {
 
         <div className="m-5">
           <div className="font-semibold mt-2">
-            <span>Name :</span>
+            <span className="w-1/3">Name :</span>
             <input
               onChange={(e) => {
                 setname(e.target.value);
@@ -67,7 +67,7 @@ function Buy({ buy, setbuy, user, p, count }) {
           </div>
 
           <div className="font-semibold mt-2">
-            <span>Address :</span>
+            <span className="w-11">Address :</span>
             <input
               onChange={(e) => {
                 setaddress(e.target.value);
