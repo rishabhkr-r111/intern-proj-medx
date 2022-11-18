@@ -36,12 +36,12 @@ function ProductTypes() {
 
             </div>
 
-            <div className="product-container " onClick={() => { nav('Healtcare') }}>
+            <div className="product-container " onClick={() => { nav('Healthcare') }}>
             <img 
                 className="product-type"
                 src="https://cdn.discordapp.com/attachments/1038025122369503282/1038111844272971836/png_20221104_205350_0000.png"
             />
-            <div className="product-text">Healtcare Products</div>
+            <div className="product-text">Healthcare Products</div>
 
             </div>
 
@@ -68,7 +68,7 @@ function ProductTypes() {
                 className="product-type"
                 src="https://cdn.discordapp.com/attachments/1038025122369503282/1038111843232784435/png_20221104_204333_0000.png"
             />
-            <div className="product-text">Healtcare Tools</div>
+            <div className="product-text">Healthcare Tools</div>
 
             </div>
 
