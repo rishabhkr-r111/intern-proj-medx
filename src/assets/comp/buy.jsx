@@ -3,7 +3,7 @@ import { db } from "../../firebase-config";
 import { addDoc, collection } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 
-function Buy({ buy, setbuy, user, p, count }) {
+function Buy({ buy, setbuy, user, p, count, location }) {
   const ordersCollection = collection(db, "orders");
   const navigate = useNavigate();
 
@@ -32,6 +32,10 @@ function Buy({ buy, setbuy, user, p, count }) {
         "https://newassets.apollo247.com/pub/media/catalog/product" +
         p.thumbnail.slice(35),
       purl: p.url_key,
+      location: {
+        latitude: location.latitude,
+        longitude: location.latitude,
+      },
     });
 
     navigate("/user");
@@ -42,7 +46,7 @@ function Buy({ buy, setbuy, user, p, count }) {
       <div
         className={
           buy
-            ? "bg-blue-500/95 w-full h-full fixed top-0 border-[1px] border-black drop-shadow-lg "
+            ? "w-full top-0 border-[1px] border-black drop-shadow-lg rounded-xl bg-gray-100"
             : "hidden"
         }
       >
@@ -55,7 +59,6 @@ function Buy({ buy, setbuy, user, p, count }) {
 
         <div className="m-5">
           <div className="font-semibold mt-2">
-            <span>Name :</span>
             <input
               onChange={(e) => {
                 setname(e.target.value);
@@ -67,7 +70,6 @@ function Buy({ buy, setbuy, user, p, count }) {
           </div>
 
           <div className="font-semibold mt-2">
-            <span>Address :</span>
             <input
               onChange={(e) => {
                 setaddress(e.target.value);
@@ -79,7 +81,6 @@ function Buy({ buy, setbuy, user, p, count }) {
           </div>
 
           <div className="font-semibold mt-2">
-            <span>Pincode :</span>
             <input
               onChange={(e) => {
                 setpincode(e.target.value);
@@ -91,7 +92,6 @@ function Buy({ buy, setbuy, user, p, count }) {
           </div>
 
           <div className="font-semibold mt-2">
-            <span>Note :</span>
             <input
               onChange={(e) => {
                 setnote(e.target.value);
@@ -102,6 +102,12 @@ function Buy({ buy, setbuy, user, p, count }) {
             ></input>
           </div>
 
+          <div className="m-5 font-semibold">
+            <h1 className="font-bold">Your Location</h1>
+            <div>latitude : {location.latitude}</div>
+            <div>longitude : {location.longitude}</div>
+          </div>
+
           <div
             className="text-xl text-white font-bold text-center p-2  rounded-[25px]
               bg-black drop-shadow-xl px-7 py-2 inline-block mt-7 mx-auto"
@@ -109,6 +115,7 @@ function Buy({ buy, setbuy, user, p, count }) {
           >
             Buy Now
           </div>
+
           <div></div>
           <div
             onClick={close}
