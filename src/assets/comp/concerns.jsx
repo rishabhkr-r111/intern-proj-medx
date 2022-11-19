@@ -18,7 +18,7 @@ function Concerns() {
 
         <div className="w-full flex overflow-x-scroll flex-nowrap no-scrollbar">
 
-            <div className="product-container " onClick={() => { nav('Diabetes') }}>
+            <div className="product-container " onClick={() => { nav('Diabetes Medicine') }}>
             <img 
                 className="product-type"
                 src="https://cdn.discordapp.com/attachments/1038137730615484427/1038284288640163930/png_20221104_232053_0000.png"
@@ -72,12 +72,12 @@ function Concerns() {
 
             </div>
 
-            <div className="product-container " onClick={() => { nav('ENT') }}>
+            <div className="product-container " onClick={() => { nav('Ears, Nose and Throat') }}>
             <img 
                 className="product-type"
                 src="https://cdn.discordapp.com/attachments/1038137730615484427/1038284291509071972/png_20221105_081259_0000.png"
             />
-            <div className="product-text">ENT</div>          
+            <div className="product-text">Ears, Nose and Throat</div>          
 
             </div>
 
