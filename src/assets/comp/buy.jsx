@@ -33,8 +33,8 @@ function Buy({ buy, setbuy, user, p, count, location }) {
         p.thumbnail.slice(35),
       purl: p.url_key,
       location: {
-        latitude: location.latitude,
-        longitude: location.latitude,
+        latitude: location.latitude || "0.0.0.0.0",
+        longitude: location.latitude || "0.0.0.0.0",
       },
     });
 
