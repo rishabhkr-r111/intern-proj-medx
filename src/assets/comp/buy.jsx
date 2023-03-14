@@ -103,7 +103,7 @@ function Buy({ buy, setbuy, user, p, count, location }) {
           </div>
 
           <div className="m-5 font-semibold">
-            <h1 className="font-bold">Your Location</h1>
+            <h1 className="font-bold">Your Location </h1>
             <div>latitude : {location.latitude}</div>
             <div>longitude : {location.longitude}</div>
           </div>
